@@ -1,0 +1,90 @@
+--  roles TABLE
++ id
++ name
++ value (ADMIN | STAFF | CUSTOMER)
+
+--  BOOK TABLE
++ isbn
++ book_title
++ book_author
++ year_of_publication
++ publisher
++ image_url
++ price
++ available_quantity
+
+--  AUTHOR TABLE
++ id
++ name
+
+--  publishers TABLE
++ id
++ name
+
+--  users TABLE
++ id
++ name
++ phone_number
++ user_name
++ password
++ address
++ role_id
+
+--  reviews TABLE
++ id
++ book_id (VARCHAR) UNIQUE
++ user_id
++ review_content
++ review_date
++ rating (INT) (MIN - 1, MAX - 5)
+
+-- orders TABLE
++ id
++ user_id
++ order_date
++ discount_id
++ state
+
+-- orders_details TABLE
++ book_id
++ order_id
++ amount
+
+-- discounts TABLE
++ id
++ name
++ value (NUMERIC)
+
+-- customers_discounts TABLE
++ user_id
++ discount_id
+
+-- book_discounts TABLE
++ book_id
++ discount_id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
